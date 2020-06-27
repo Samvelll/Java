@@ -8,6 +8,10 @@ public class Driving {
         this.car = car;
     }
 
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
     void toDrive() {
         System.out.println("to drive a " + car.getName()+ " " + car.getSeries());
     }

@@ -24,7 +24,7 @@
 
     <bean id = "drive_id"
           class = "am.sam.springproject.Driving">
-        <constructor-arg ref = "bmw_id" />
+        <constructor-arg ref = "bmw_id" /> <!-- without a property answer will be BMW X5 -->
+        <property name="car" ref = "toyota_id"/> <!--//with property answer will be Toyota Camry -->
     </bean>
-
 </beans>
