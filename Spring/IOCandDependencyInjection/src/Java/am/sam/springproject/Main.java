@@ -9,5 +9,6 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationcontext.xml");
         Driving car = (Driving)context.getBean("drive_id");
         car.toDrive();
+        System.out.println(car.getYear());
     }
 }

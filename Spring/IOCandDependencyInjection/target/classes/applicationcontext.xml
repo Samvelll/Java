@@ -7,6 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="beans.properties" />
+
     <bean id = "mercedes_id"
           class = "am.sam.springproject.Mercedes">
         <constructor-arg value="CLK" />
@@ -26,5 +28,6 @@
           class = "am.sam.springproject.Driving">
         <constructor-arg ref = "bmw_id" /> <!-- without a property answer will be BMW X5 -->
         <property name="car" ref = "toyota_id"/> <!--//with property answer will be Toyota Camry -->
+        <property name="year" value = "${Driving.year}" />
     </bean>
 </beans>
